@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advanced Auto Air & Repair | Auto A/C Repair in Pensacola, FL</title>
+<meta name="description" content="Auto air conditioning and general repair on N Palafox St in Pensacola since 1990. A/C diagnosis and recharge, brakes, electrical, fuel injection and more. Call (850) 432-4083.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Advanced Auto Air & Repair",
+  "telephone": "+1-850-432-4083",
+  "foundingDate": "1990",
+  "address": {"@type": "PostalAddress", "streetAddress": "4605 N Palafox St", "addressLocality": "Pensacola", "addressRegion": "FL", "postalCode": "32505", "addressCountry": "US"},
+  "openingHours": "Mo-Fr 08:00-17:00",
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "56"}
+}
+</script>
+<style>
+  :root {
+    --steel: #E6EAED;
+    --steel-deep: #D5DBE0;
+    --white: #FAFBFC;
+    --ink: #13213A;
+    --ink-soft: #4E5A6B;
+    --rule: #C3CBD3;
+    --cold: #2160D0;
+    --cold-pale: #DCE7FA;
+    --signal: #C7302A;
+    --signal-deep: #A3241F;
+
+    --display: "Archivo", system-ui, sans-serif;
+    --body: "Archivo", system-ui, sans-serif;
+
+    --s-1: 0.875rem;
+    --s0: 1rem;
+    --s1: 1.125rem;
+    --s2: 1.375rem;
+    --s3: 1.75rem;
+    --s4: 2.25rem;
+    --s5: clamp(2.3rem, 4.3vw, 3.7rem);
+
+    --gutter: clamp(1rem, 4vw, 3rem);
+    --max: 1240px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--steel);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: var(--s0);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--cold); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-stretch: 125%;
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h2 { font-size: var(--s4); }
+  h3 { font-size: var(--s1); font-weight: 700; letter-spacing: -0.005em; line-height: 1.25; }
+  p { margin: 0; text-wrap: pretty; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: .6em;
+    padding: .95em 1.4em;
+    font: 700 var(--s0)/1 var(--display);
+    font-stretch: 112%;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: background-color .15s, color .15s, border-color .15s;
+  }
+  .btn svg { width: 1.1em; height: 1.1em; flex: none; }
+  .btn-call { background: var(--signal); color: #fff; }
+  .btn-call:hover { background: var(--signal-deep); }
+  .btn-line { border-color: var(--ink); color: var(--ink); }
+  .btn-line:hover { background: var(--ink); color: var(--white); }
+
+  /* Top strip */
+  .strip {
+    background: var(--ink); color: #C9D2DE;
+    font-size: var(--s-1);
+  }
+  .strip .wrap { display: flex; justify-content: space-between; gap: 1rem; padding-block: .55rem; }
+  .strip a { text-decoration: none; }
+  .strip a:hover { color: #fff; }
+  .status { display: inline-flex; align-items: center; gap: .5em; color: #fff; }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #8A96A6; }
+  .status.is-open::before { background: #4FC27A; box-shadow: 0 0 0 3px rgb(79 194 122 / .25); }
+
+  /* Header */
+  .site-head {
+    position: sticky; top: 0; z-index: 20;
+    background: rgb(230 234 237 / .92);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .site-head .wrap { display: flex; align-items: center; gap: 2rem; padding-block: .9rem; }
+  .mark { text-decoration: none; line-height: 1; display: grid; gap: .2rem; }
+  .mark-name { font-family: var(--display); font-stretch: 125%; font-weight: 900; font-size: 1.2rem; letter-spacing: -0.01em; }
+  .mark-name .r { color: var(--signal); }
+  .mark-name .b { color: var(--cold); }
+  .mark-sub { font-size: .75rem; color: var(--ink-soft); font-stretch: 100%; font-weight: 500; }
+  .nav { display: flex; gap: 1.75rem; margin-left: auto; }
+  .nav a { text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--ink-soft); }
+  .nav a:hover { color: var(--ink); }
+  .site-head .btn { padding: .7em 1.1em; font-size: .95rem; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 12fr);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+    padding-block: clamp(3rem, 7vw, 6rem) clamp(3.5rem, 7vw, 6.5rem);
+  }
+  .hero h1 { font-size: var(--s5); }
+  .hero-lede { font-size: var(--s1); color: var(--ink-soft); max-width: 34em; margin-top: 1.5rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+  .hero-fine { margin-top: 1.25rem; font-size: var(--s-1); color: var(--ink-soft); }
+
+  .hero-visual { position: relative; }
+  .hero-photo {
+    border-radius: 10px; overflow: hidden;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 30px 60px -30px rgb(19 33 58 / .45);
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 60%; }
+
+  /* Vent gauge: the one orchestrated moment */
+  .gauge {
+    position: absolute; left: clamp(-3rem, -4vw, -1rem); bottom: -2.25rem;
+    width: min(360px, 88%);
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem 1.2rem;
+    box-shadow: 0 18px 40px -18px rgb(19 33 58 / .5), 0 0 0 1px rgb(19 33 58 / .06);
+  }
+  .gauge-head { display: flex; justify-content: space-between; align-items: baseline; font-size: var(--s-1); color: var(--ink-soft); }
+  .gauge-head strong { color: var(--ink); font-weight: 700; }
+  .readings { display: flex; align-items: flex-end; justify-content: space-between; margin-top: .6rem; }
+  .reading { display: grid; gap: .1rem; }
+  .reading span { font-size: .8rem; color: var(--ink-soft); }
+  .reading b {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800;
+    font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.03em;
+  }
+  .reading.out b { font-size: 1.75rem; color: var(--signal); }
+  .reading.vent { text-align: right; }
+  .reading.vent b { font-size: 3.4rem; color: var(--cold); }
+  .scale { position: relative; margin-top: 1rem; height: 34px; }
+  .scale-track {
+    position: absolute; inset: 0 0 auto; height: 8px; border-radius: 4px;
+    background: linear-gradient(90deg, #2160D0 0%, #7FA6E8 30%, #E5E9EE 50%, #EBA49F 75%, #C7302A 100%);
+  }
+  .scale-needle {
+    position: absolute; top: -5px; width: 4px; height: 18px; margin-left: -2px;
+    background: var(--ink); border-radius: 2px;
+    left: var(--pos, 91.4%);
+    transition: left 1.8s cubic-bezier(.3, .0, .2, 1);
+  }
+  .scale-ticks { position: absolute; inset: 14px 0 0; font-size: .7rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .scale-ticks span { position: absolute; left: var(--at); transform: translateX(-50%); }
+  .scale-ticks span:first-child { transform: none; }
+  .scale-ticks span:last-child { transform: translateX(-100%); }
+
+  /* Facts row */
+  .facts { border-block: 1px solid var(--rule); background: var(--white); }
+  .facts dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+  .facts div { padding: 1.4rem 1.5rem; border-left: 1px solid var(--rule); }
+  .facts div:first-child { border-left: 0; padding-left: 0; }
+  .facts dt { font-size: var(--s-1); color: var(--ink-soft); }
+  .facts dd { margin: .2rem 0 0; font-family: var(--display); font-stretch: 115%; font-weight: 700; font-size: var(--s2); line-height: 1.2; }
+  .stars { color: #E2A100; letter-spacing: .05em; font-size: .9em; margin-left: .3em; }
+
+  /* Sections */
+  section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+  .section-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(1.5rem, 5vw, 4.5rem); align-items: end; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .section-head p { color: var(--ink-soft); font-size: var(--s1); max-width: 36em; }
+
+  /* Services */
+  .services-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(1.5rem, 5vw, 4.5rem); align-items: start; }
+  .ac-panel {
+    background: var(--ink); color: #DDE4EE;
+    border-radius: 12px;
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    position: relative; overflow: hidden;
+  }
+  .ac-panel::after {
+    content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px;
+    background: repeating-linear-gradient(90deg, rgb(255 255 255 / .06) 0 3px, transparent 3px 14px);
+    border-radius: 50%;
+  }
+  .ac-panel h3 { color: #fff; font-size: var(--s3); font-weight: 800; }
+  .ac-panel > p { margin-top: .9rem; max-width: 30em; }
+  .ac-list { list-style: none; padding: 0; margin: 1.75rem 0 0; display: grid; gap: 0; }
+  .ac-list li { display: flex; gap: .85rem; padding: .85rem 0; border-top: 1px solid rgb(255 255 255 / .12); }
+  .ac-list svg { flex: none; width: 20px; height: 20px; margin-top: .2rem; color: #7FA6E8; }
+  .ac-list strong { color: #fff; font-weight: 600; display: block; }
+  .ac-list span { font-size: var(--s-1); color: #A9B6C8; }
+  .ac-panel .btn { margin-top: 1.75rem; }
+
+  .repair-list h3.list-title { font-size: var(--s2); margin-bottom: .5rem; }
+  .repair-list > p { color: var(--ink-soft); }
+  .repair-list ul { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+  .repair-list li {
+    display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 1.25rem;
+    padding: 1.2rem 0; border-top: 1px solid var(--rule);
+  }
+  .repair-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .repair-list li h3 { font-stretch: 112%; }
+  .repair-list li p { color: var(--ink-soft); }
+
+  /* About */
+  .about { background: var(--white); border-block: 1px solid var(--rule); }
+  .about-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+  .about-photo { border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-copy h2 { margin-bottom: 1.25rem; }
+  .about-copy p + p { margin-top: 1rem; }
+  .about-copy p { color: var(--ink-soft); font-size: var(--s1); }
+  .since {
+    display: inline-flex; align-items: baseline; gap: .6rem;
+    margin-bottom: 1.25rem;
+    font-family: var(--display); font-stretch: 125%; font-weight: 900;
+    font-size: 1rem; color: var(--signal);
+  }
+  .since b { font-size: 3.5rem; line-height: .9; letter-spacing: -0.04em; }
+
+  /* Gallery */
+  .gallery-grid {
+    display: grid; gap: 12px;
+    grid-template-columns: 2fr 1fr 1.4fr;
+    grid-template-rows: 280px 280px;
+  }
+  .gallery-grid figure { margin: 0; position: relative; border-radius: 8px; overflow: hidden; background: var(--steel-deep); }
+  .gallery-grid img { width: 100%; height: 100%; object-fit: cover; }
+  .gallery-grid figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 2.5rem 1rem .85rem;
+    color: #fff; font-size: var(--s-1); font-weight: 500;
+    background: linear-gradient(transparent, rgb(19 33 58 / .75));
+  }
+  .g-snow { grid-row: 1 / 3; }
+  .g-bays { grid-row: 1 / 3; }
+
+  /* Reviews */
+  .reviews-top { display: flex; justify-content: space-between; align-items: end; gap: 2rem; flex-wrap: wrap; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .score { display: flex; align-items: center; gap: 1rem; }
+  .score b { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 3rem; line-height: 1; letter-spacing: -0.03em; }
+  .score p { font-size: var(--s-1); color: var(--ink-soft); line-height: 1.4; }
+  .score .stars { font-size: 1.1rem; margin: 0; display: block; }
+  .reviews-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 4vw, 3rem); }
+  .quote-lead {
+    margin: 0; padding: clamp(1.75rem, 4vw, 2.75rem);
+    background: var(--white); border-radius: 12px; border: 1px solid var(--rule);
+  }
+  .quote-lead blockquote { margin: 0; font-size: var(--s2); line-height: 1.45; font-weight: 400; letter-spacing: -0.01em; }
+  .quote-lead blockquote::before { content: "\201C"; display: block; font-family: var(--display); font-weight: 900; font-size: 4rem; line-height: .6; color: var(--cold); margin-bottom: .75rem; }
+  .who { display: flex; align-items: center; gap: .75rem; margin-top: 1.5rem; font-size: var(--s-1); }
+  .who img { width: 36px; height: 36px; border-radius: 50%; }
+  .who b { display: block; font-weight: 600; font-size: var(--s0); }
+  .who span { color: var(--ink-soft); }
+  .quote-stack { display: grid; gap: 0; align-content: start; }
+  .quote-stack figure { margin: 0; padding: 1.4rem 0; border-top: 1px solid var(--rule); }
+  .quote-stack figure:first-child { border-top: 0; padding-top: 0; }
+  .quote-stack blockquote { margin: 0; color: var(--ink); }
+  .reviews-link { margin-top: 1.75rem; display: inline-block; font-weight: 600; color: var(--cold); }
+
+  /* Visit */
+  .visit { background: var(--ink); color: #DDE4EE; }
+  .visit h2 { color: #fff; }
+  .visit-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 4.5rem); }
+  .visit-intro { margin-top: 1rem; font-size: var(--s1); color: #A9B6C8; max-width: 30em; }
+  .phone-big {
+    display: inline-block; margin-top: 2rem;
+    font-family: var(--display); font-stretch: 125%; font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: -0.02em; line-height: 1;
+    color: #fff; text-decoration: none;
+  }
+  .phone-big:hover { color: #9DBBF0; }
+  .visit-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+  .visit-details h3 { color: #fff; font-size: var(--s0); font-stretch: 112%; margin-bottom: .5rem; }
+  .visit-details address { font-style: normal; }
+  .visit-details a { color: #9DBBF0; }
+  .hours { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .hours td { padding: .3rem 0; }
+  .hours td:last-child { text-align: right; color: #fff; }
+  .hours tr.today td { color: #fff; font-weight: 700; }
+  .hours tr.today td:first-child::after { content: " (today)"; font-weight: 400; color: #A9B6C8; }
+  .map { border-radius: 12px; overflow: hidden; min-height: 420px; background: #1E2E4A; }
+  .map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; filter: grayscale(.35) contrast(1.05); }
+
+  /* Footer */
+  .site-foot { background: #0E192D; color: #8D9BB0; font-size: var(--s-1); }
+  .site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.75rem; }
+  .site-foot nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .site-foot a { text-decoration: none; }
+  .site-foot a:hover { color: #fff; }
+
+  /* Mobile call bar */
+  .callbar { display: none; }
+
+  @media (max-width: 960px) {
+    .nav { display: none; }
+    .site-head .btn { margin-left: auto; }
+    .hero-grid, .section-head, .services-grid, .about-grid, .visit-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
+    .hero-grid { padding-bottom: 5rem; }
+    .gauge { left: 1rem; }
+    .facts dl { grid-template-columns: 1fr 1fr; }
+    .facts div { border-left: 0; padding: 1.1rem 0; }
+    .facts div:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid var(--rule); }
+    .facts div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-grid figure { aspect-ratio: 4 / 3; }
+    .g-snow { grid-row: auto; grid-column: 1 / 3; aspect-ratio: 16 / 9 !important; }
+    .g-bays { grid-row: auto; }
+    .about-photo { order: 2; }
+  }
+  @media (max-width: 640px) {
+    :root { --s4: 1.85rem; }
+    body { padding-bottom: 68px; }
+    .strip .hide-sm { display: none; }
+    .facts dd { font-size: var(--s1); }
+    .site-head .btn { display: none; }
+    .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+    .gauge { position: relative; left: auto; bottom: auto; width: auto; margin: -2.5rem 1rem 0; }
+    .hero-grid { padding-bottom: 3rem; }
+    .repair-list li { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+    .visit-details { grid-template-columns: minmax(0, 1fr); }
+    .gallery-grid { grid-template-columns: minmax(0, 1fr); }
+    .g-snow { grid-column: auto; }
+    .g-bays { aspect-ratio: 3 / 4 !important; }
+    .callbar {
+      display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+      padding: .6rem 1rem calc(.6rem + env(safe-area-inset-bottom));
+      background: var(--white); border-top: 1px solid var(--rule);
+      box-shadow: 0 -10px 30px -12px rgb(19 33 58 / .3);
+    }
+    .callbar .btn { flex: 1; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-flake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2.5L15 4M9 20l3-2.5 3 2.5"/></symbol>
+</svg>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="status" id="status">Mon–Fri, 8 AM to 5 PM</span>
+    <a class="hide-sm" href="https://maps.google.com/?q=4605+N+Palafox+St,+Pensacola,+FL+32505" target="_blank" rel="noopener">4605 N Palafox St, Pensacola</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Advanced Auto Air & Repair, home">
+      <span class="mark-name"><span class="r">Advanced</span> <span class="b">Auto Air</span></span>
+      <span class="mark-sub">& Repair · Pensacola since 1990</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">The shop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+18504324083"><svg aria-hidden="true"><use href="#i-phone"/></svg>(850) 432-4083</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title" style="padding-block:0">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title">Cold air again, before the afternoon heat.</h1>
+        <p class="hero-lede">Auto air conditioning is what we've specialized in on North Palafox since 1990. We find the leak, fix the cause and get your vents blowing cold. We handle brakes, electrical and general repair too.</p>
+        <div class="hero-actions">
+          <a class="btn btn-call" href="tel:+18504324083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call for a free estimate</a>
+          <a class="btn btn-line" href="#services">See what we fix</a>
+        </div>
+        <p class="hero-fine">Open Monday to Friday, 8 to 5. Saturdays by appointment.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="img/storefront.jpg" width="680" height="510" alt="The Advanced Auto Air shop front at 4605 N Palafox St, with service bays and a car parked out front" fetchpriority="high">
+        </div>
+        <div class="gauge" role="img" aria-label="Vent check on a working system: 94 degrees outside, 40 degrees at the center vent">
+          <div class="gauge-head"><strong>Vent check</strong><span>Working system, July</span></div>
+          <div class="readings" aria-hidden="true">
+            <div class="reading out"><span>Outside</span><b>94°</b></div>
+            <div class="reading vent"><span>Center vent</span><b id="vent">94°</b></div>
+          </div>
+          <div class="scale" aria-hidden="true">
+            <div class="scale-track"></div>
+            <div class="scale-needle" id="needle"></div>
+            <div class="scale-ticks"><span style="--at:0%">30°</span><span style="--at:28.57%">50°</span><span style="--at:57.14%">70°</span><span style="--at:100%">100°</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <dl>
+        <div><dt>Google rating</dt><dd>4.3<span class="stars" aria-hidden="true">★★★★</span></dd></div>
+        <div><dt>Reviews</dt><dd>56 verified</dd></div>
+        <div><dt>In business</dt><dd>Since 1990</dd></div>
+        <div><dt>Estimates</dt><dd>Free, by phone</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">A/C is our specialty. The rest of the car is covered too.</h2>
+        <p>Most people come to us because the air stopped blowing cold. Plenty stay because we can handle whatever else the car needs, all under one roof.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="ac-panel">
+          <h3>Auto air conditioning</h3>
+          <p>We diagnose why your system isn't cooling instead of topping it off and sending you on your way.</p>
+          <ul class="ac-list">
+            <li><svg aria-hidden="true"><use href="#i-flake"/></svg><div><strong>Diagnosis and leak detection</strong><span>Pressure testing and dye checks to find where the refrigerant is going.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-flake"/></svg><div><strong>Evacuate and recharge</strong><span>Correct refrigerant and oil charge for your vehicle's system.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-flake"/></svg><div><strong>Compressors, condensers and evaporators</strong><span>Replacing the major components when a recharge won't fix it.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-flake"/></svg><div><strong>Blowers, blend doors and A/C electrical</strong><span>For air that's weak, warm on one side or not coming out at all.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-flake"/></svg><div><strong>Cars, SUVs and heavy-duty trucks</strong><span>From daily drivers to work pickups.</span></div></li>
+          </ul>
+          <a class="btn btn-call" href="tel:+18504324083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Book an A/C check</a>
+        </article>
+
+        <div class="repair-list">
+          <h3 class="list-title">Everything else under the hood</h3>
+          <p>The same work you'll see painted on our shop windows.</p>
+          <ul>
+            <li><h3>Brakes</h3><p>Pads, rotors, calipers and lines. If it squeals, grinds or pulls, bring it by.</p></li>
+            <li><h3>Electrical</h3><p>Batteries, alternators, starters, wiring faults and warning lights.</p></li>
+            <li><h3>Fuel injection</h3><p>Injector cleaning and replacement, fuel pumps and rough-running engines.</p></li>
+            <li><h3>Tune-ups</h3><p>Plugs, filters, belts and the routine maintenance that keeps a car reliable.</p></li>
+            <li><h3>Water pumps and cooling</h3><p>Water pumps, radiators, hoses and thermostats. Overheating is often tied to A/C trouble.</p></li>
+            <li><h3>General repair</h3><p>Not sure what's wrong? Call and describe it. We'll tell you if it's something we can fix.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="img/lobby.jpg" width="680" height="510" alt="The front counter inside Advanced Auto Air & Repair, under a sign reading Established 1990" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <div class="since"><b>1990</b><span>the year we opened</span></div>
+        <h2 id="about-title">A local shop that people come back to.</h2>
+        <p>Advanced Auto Air & Repair has kept Pensacola cars cool for more than three decades. In a city where the A/C runs ten months a year, that's a lot of compressors.</p>
+        <p>We'll give you a straight answer: we explain what we found, what it costs and what can wait. If you'd like your old parts back, just ask.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="gallery-title">The shop</h2>
+        <p>Look for the red and blue sign at 4605 N Palafox St, a few minutes north of downtown.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="g-snow"><img src="img/snow.jpg" width="1600" height="1200" alt="The shop building under snow on a clear day" loading="lazy"><figcaption>Yes, that's snow on Palafox. Even then, people still asked about their A/C.</figcaption></figure>
+        <figure><img src="img/storefront.jpg" width="680" height="510" alt="Shop front with the service bays and a white Dodge Challenger" loading="lazy"><figcaption>Front entrance and service bays</figcaption></figure>
+        <figure class="g-bays"><img src="img/bays.jpg" width="382" height="510" alt="Open service bays under the Advanced Auto Air sign at dusk" loading="lazy"><figcaption>Open weekdays, 8 to 5</figcaption></figure>
+        <figure><img src="img/lobby.jpg" width="680" height="510" alt="Customer counter and waiting area" loading="lazy"><figcaption>Front counter</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" style="padding-top:0" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-top">
+        <h2 id="reviews-title">What customers say</h2>
+        <div class="score">
+          <b>4.3</b>
+          <p><span class="stars" aria-hidden="true">★★★★☆</span>From 56 reviews on Google</p>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <figure class="quote-lead">
+          <blockquote>Our car began shaking extremely bad about an hour before getting there. We were in a bind… We stopped by here and the mechanic stopped what he was doing and drove and diagnosed our car immediately. Even though he did not work on our car he saved us in a moment where we really needed help.</blockquote>
+          <figcaption class="who">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjW1R2LXZBzdT55tPxx6R0s-FCF04Vc4XypoC9zl4dEa60fDX30=s64-c-rp-mo-br100" alt="" width="36" height="36" loading="lazy" referrerpolicy="no-referrer">
+            <div><b>Traci Bankovic</b><span>Visiting from Orlando</span></div>
+          </figcaption>
+        </figure>
+
+        <div class="quote-stack">
+          <figure>
+            <blockquote>Advanced Auto Air quickly diagnosed, and repaired my AC! I trust Tim, his business, and staff.</blockquote>
+            <figcaption class="who"><div><b>Yo Core</b></div></figcaption>
+          </figure>
+          <figure>
+            <blockquote>Had my Ram 3500 A/C repaired here. Such a great and warm atmosphere. Teresa was very helpful and friendly… They fixed it in a timely manner and reasonable price.</blockquote>
+            <figcaption class="who"><div><b>Robert Brill</b></div></figcaption>
+          </figure>
+          <figure>
+            <blockquote>In the past year and a half I've taken three different cars to this establishment. They have always treated me with courtesy and given me straightforward answers about my repairs and costs.</blockquote>
+            <figcaption class="who"><div><b>Jeffery R. Thomas</b></div></figcaption>
+          </figure>
+          <a class="reviews-link" href="https://www.google.com/maps/search/?api=1&query=Advanced+Auto+Air+%26+Repair+4605+N+Palafox+St+Pensacola" target="_blank" rel="noopener">Read all reviews on Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit" aria-labelledby="visit-title">
+    <div class="wrap visit-grid">
+      <div>
+        <h2 id="visit-title">Warm air? Call us.</h2>
+        <p class="visit-intro">Tell us what the car is doing and we'll give you a free estimate and a time to bring it in.</p>
+        <a class="phone-big" href="tel:+18504324083">(850) 432-4083</a>
+
+        <div class="visit-details">
+          <div>
+            <h3>Find us</h3>
+            <address>4605 N Palafox St<br>Pensacola, FL 32505</address>
+            <p style="margin-top:.5rem"><a href="https://maps.google.com/?q=4605+N+Palafox+St,+Pensacola,+FL+32505" target="_blank" rel="noopener">Get directions</a></p>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <table class="hours" id="hours">
+              <tr data-days="1-5"><td>Mon–Fri</td><td>8 AM – 5 PM</td></tr>
+              <tr data-days="6"><td>Saturday</td><td>By appointment</td></tr>
+              <tr data-days="0"><td>Sunday</td><td>Closed</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Map showing Advanced Auto Air & Repair at 4605 N Palafox St, Pensacola" src="https://www.google.com/maps?q=4605+N+Palafox+St,+Pensacola,+FL+32505&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Advanced Auto Air & Repair · Pensacola, Florida</span>
+    <nav aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-call" href="tel:+18504324083"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (850) 432-4083</a>
+</div>
+
+<script>
+  // Vent gauge: drops from outside temp to vent temp once on load.
+  (function () {
+    var from = 94, to = 40, min = 30, max = 100;
+    var vent = document.getElementById('vent');
+    var needle = document.getElementById('needle');
+    var pos = function (t) { return ((t - min) / (max - min) * 100) + '%'; };
+    needle.style.setProperty('--pos', pos(from));
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { vent.textContent = to + '°'; needle.style.transition = 'none'; needle.style.setProperty('--pos', pos(to)); return; }
+    var dur = 1800, start;
+    function ease(x) { return 1 - Math.pow(1 - x, 3); }
+    function tick(now) {
+      if (!start) start = now;
+      var p = Math.min(1, (now - start) / dur);
+      vent.textContent = Math.round(from + (to - from) * ease(p)) + '°';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    function run() {
+      setTimeout(function () {
+        needle.style.setProperty('--pos', pos(to));
+        requestAnimationFrame(tick);
+      }, 400);
+    }
+    // On phones the gauge sits below the fold, so wait until it's on screen.
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { io.disconnect(); run(); }
+    }, { threshold: 0.6 });
+    io.observe(needle.closest('.gauge'));
+  })();
+
+  // Open/closed status and today's hours, in Pensacola time (Central).
+  (function () {
+    var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', hour12: false, minute: 'numeric' }).formatToParts(new Date());
+    var get = function (t) { return (parts.find(function (p) { return p.type === t; }) || {}).value; };
+    var day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var mins = (parseInt(get('hour'), 10) % 24) * 60 + parseInt(get('minute'), 10);
+    var weekday = day >= 1 && day <= 5;
+    var open = weekday && mins >= 480 && mins < 1020;
+    var el = document.getElementById('status');
+    if (open) { el.textContent = 'Open now until 5 PM'; el.classList.add('is-open'); }
+    else if (weekday && mins < 480) { el.textContent = 'Closed now, opens today at 8 AM'; }
+    else if (day >= 0 && day <= 4) { el.textContent = 'Closed now, opens tomorrow at 8 AM'; }
+    else { el.textContent = 'Closed now, opens Monday at 8 AM'; }
+
+    document.querySelectorAll('#hours tr').forEach(function (row) {
+      var d = row.dataset.days.split('-').map(Number);
+      var hit = d.length === 2 ? day >= d[0] && day <= d[1] : day === d[0];
+      if (hit) row.classList.add('today');
+    });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
